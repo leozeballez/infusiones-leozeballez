@@ -1,13 +1,11 @@
 package ar.edu.unahur.obj2;
 
-public class Roborista implements PrepararInfusion, AgregarAdicionales {
+public class Roborista implements PrepararInfusion {
 
     private Infusion infusion;
-    private int temperaturaAgua;
 
     public Roborista(Infusion infusion) {
         this.infusion = infusion;
-        this.temperaturaAgua = 0;
     }
 
     public Infusion getInfusion() {
@@ -18,17 +16,9 @@ public class Roborista implements PrepararInfusion, AgregarAdicionales {
         this.infusion = infusion;
     }
 
-    public void setTemperaturaAgua(int temperaturaAgua) {
-        this.temperaturaAgua = temperaturaAgua;
-    }
-
-    @Override
-    public void agregarAdicionales() {
-
-    }
 
     @Override
     public void prepararInfusion() {
-
+        infusion.prepararInfusion();
     }
 }
